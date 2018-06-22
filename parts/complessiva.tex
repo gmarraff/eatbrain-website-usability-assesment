@@ -13,30 +13,63 @@ Un altro punto a favore lo si trova nel layout generico: tutte le pagine infatti
 	\label{struttura-default}
 \end{figure}\\\\
 Facilitando l'orientamento all'interno del sito dopo poche interazioni.
-
+\newpage
 \subsection{Navigazione}
-No ricerca ma facile orientarsi tramite il menu
-No breadcrumb ma evita lost in navigation grazie a struttura semplice
-Unica semi pecca grosso scroll per cercare artisti/releases (ricerca browser = sforzo computazionale/ignoranza)
-Back button sempre possibile
+La navigazione interna risulta molto semplice ed efficace, nonostante l'assenza di un breadcrumb per specificare con esattezza la propria posizione all'interno del sito, la struttura poco profonda del sito permette di non sentirne la mancanza. Inoltre il menù evidenzia la sezione in cui ci si trova permettendo all'utente di rendersi conto immediatamente della propria posizione.\\
+Volendo essere pignoli, lo strumento utilizzato per evidenziare la sezione (i triangolini rivolti verso l'alto) può confondersi nella home page (in quanto molto vicino al logo che è simile) ma una volta cambiata sezione l'associazione è immediata. In più ogni pagina interna presenta come prima riga del contenuto il titolo della sezione permettendo di essere sempre consci della pagina che si sta visitando.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{immagini/menu}
+	\caption{Menu nella pagina "Releases"}
+	\label{menu}
+\end{figure}\\
+Un'altra piccolezza molto importante è che per navigare tra le pagine non viene richiesto nessun dato o aperta nessuna nuova finestra, rendendo possibile il viaggio nel tempo all'indietro senza alcuna limitazione. Questa caratteristica è molto importante perchè gli utenti preferiscono cliccare fino a 7 volte il tasto back del browser piuttosto che cercare un link diretto, questo sito quindi lascia l'opportunità di cliccare back per tutte le volte necessarie a ritrovare l'informazione.\\
+Alcuni problemi possono trovarsi nell'individuazione dei link, ma il discorsò verrà approfondito nella sezione \hyperref[convenzioni]{\texttt{Rispetto Delle Convenzioni}}.
 \subsection{Ricerca}
-No ricerca problema nelle pagine a livello più basso (può essere gesitita con ricerca browser ma può richiedere troppo sforzo da parte dell'utente e ignoranza non aiuta)
+Nel sito è completamente assente la funzionalità di ricerca, sebbene questo può non essere un problema nelle pagine principali, può causare sensazioni negative nelle pagine a profondità più bassa: come dicevamo prima le pagine che elencano artisti e tracce musicali sono disposte a griglia e non hanno un numero limitato di elementi; questo può causare frustrazione nell'utente quando impegnato nella ricerca di un determinato artista: la disposizione della pagina lo obbliga ad effettuare lo scroll verticale e a sforzare la testa per individuare l'elemento ricercato.\\
+Inoltre le tracce audio sono disposte in ordine cronologico (a differenza degli artisti che seguono l'ordine alfabetico) senza esplicitare l'effettiva data d'uscita, richiedendo all'utente lo sforzo aggiuntivo di ricordare a grandi linee il periodo di pubblicazione della traccia desiderata. \\
+Un elemento che può ridurre questo problema è lo strumento di ricerca del browser ma anche questo richiede sforzo per la sua attivazione e l'utente può non esserne a conoscenza.
 \subsection{Contenuti Multimediali}
-Mannaggia allo slideshow
-Caricamento immagine di menu può essere male per connessioni lente
-Integrazione soundcloud ottima ma no-javascript no avvisi
-Immagine di background non invasiva anzi integrata ottimamente
-Immagine header no copy e paste slogan
-Immagini release possono aiutare ad orientarsi (lasciano un ricordo di ciò che ho visto)
+Mannaggia allo slideshow \\
+Caricamento immagine di menu può essere male per connessioni lente\\
+Integrazione soundcloud ottima ma no-javascript no avvisi\\
+Immagine di background non invasiva anzi integrata ottimamente\\
+Immagine header no copy e paste slogan\\
+Immagini release possono aiutare ad orientarsi (lasciano un ricordo di ciò che ho visto) \\
 \subsection{Rispetto Delle Convenzioni}
+\label{convenzioni}
 \subsubsection{Convenzioni Esterne}
-No bloated design
-No visited link
+No bloated design\\
+No visited link\\
+Link non di facilissima individuazione
 \subsubsection{Convezioni Interne}
 A volta il link è sull'immagine (artisti, macrosezioni) a volte sul testo (releases/podcasts).
 \subsection{Gestione degli Errori}
-Lost in navigation gestita bene
-404 OK,
-500 male (/podcasts/)
+Capita a tutti gli utenti di cliccare su un link che indirizza ad una pagina non esistente, che sia un link sbagliato o un contenuto rimosso la situazione può essere frustrante per un utente meno esperto, soprattutto quando il link incriminato è all'interno del sito. \\
+Fortunatamente sul sito di Eatbrain non ci sono link "corrotti" ma è possibile che siti esterni indirizzino a pagine del sito che non esistono più. Per ovviare a questo problema gli sviluppatori di \texttt{eatbrain.net} hanno sviluppato una pagina di 404 (l'errore standard dell'http per il contenuto non trovato) personalizzata, che mantiene lo stesso layout del sito evitando di lasciare nell'utente la sensazione di smarrimento, offrendo il menu di navigazione per permettere all'utente di navigare nelle altre sezioni del sito.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{immagini/404}
+	\caption{Pagina di Errore 404}
+	\label{page-404}
+\end{figure}\\
+\newpage
+In caso di errore 500 (Internal Server Error) invece la situazione non è gestita al meglio: la pagina infatti si presenta come testo nero su bianco (pare una leggera personalizzazione della pagina standard del Webserver Apache) e nonostante segua i dettami delle informazioni da fornire in questo caso (cosa può aver causato l'errore, contatti per sistemare la situazione, etc.), la completa discrepanza con il design usuale del sito potrebbe invogliare l'utente a non leggere il testo e a considerare il sito non funzionante.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{immagini/500}
+	\caption{Pagina di Errore 500}
+	\label{page-500}
+\end{figure}\\
+Sebbene gli errori di questo tipo siano rari, sarebbe stato meglio uniformare il messaggio d'errore con il resto del sito. \\
+In più ho trovato due casi "pericolosi" in cui si presenta l'errore: gli URL del sito sono scritti nella forma: \texttt{https://eatbrain.net/resto}; ponendo invece uno slash alla fine (\texttt{https://eatbrain.net/resto/}) si incorre nell'errore sopracitato. \\
+Questa piccolezza può rivelarsi più grave del previsto: se eventuali entità linkassero delle pagine del sito ponendo uno slash alla fine (che per convenzione uno potrebbe fare, di solito gli URL funzionano anche con lo slash finale), gli utenti che cliccherebbero sul link si troverebbero una pagina bianca, eliminando quasi totalmente ogni possibilità di continuare la navigazione.\\
+Effettuando lo stesso errore (slash finale) ma linkando una pagina che non esiste, la situazione è ancora peggiore: viene caricata la pagina 404 ma senza alcuno stile, infondendo all'utente l'idea che il sito sia non funzionante.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{immagini/404-bad}
+	\caption{Pagina 404 senza CSS}
+	\label{page-404-bad}
+\end{figure}\\ 
 \subsection{Pubblicità}
 Non essendo il sito web la fonte di introito per l'azienda, nessuna pagina presenta pubblicità, rendendo sicuramente più piacevole l'esperienza dell'utente.
