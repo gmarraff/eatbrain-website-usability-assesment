@@ -24,6 +24,7 @@ Volendo essere pignoli, lo strumento utilizzato per evidenziare la sezione (i tr
 	\label{menu}
 \end{figure}\\
 Un'altra piccolezza molto importante è che per navigare tra le pagine non viene richiesto nessun dato o aperta nessuna nuova finestra, rendendo possibile il viaggio nel tempo all'indietro senza alcuna limitazione. Questa caratteristica è molto importante perchè gli utenti preferiscono cliccare fino a 7 volte il tasto back del browser piuttosto che cercare un link diretto, questo sito quindi lascia l'opportunità di cliccare back per tutte le volte necessarie a ritrovare l'informazione.\\
+Il menù inoltre è molto accessibile: grazie alla struttura semplice della pagina non sono presenti menù a cascata che possono risultare fastidiosi con troppi livelli di profondità, mentre i tasti disponibili sono ben visibili e facilmente cliccabili (lo spazio per il click è sufficiente).
 Alcuni problemi possono trovarsi nell'individuazione dei link, ma il discorsò verrà approfondito nella sezione \hyperref[convenzioni]{\texttt{Rispetto Delle Convenzioni}}.
 \subsection{Ricerca}
 Nel sito è completamente assente la funzionalità di ricerca, sebbene questo può non essere un problema nelle pagine principali, può causare sensazioni negative nelle pagine a profondità più bassa: come dicevamo prima le pagine che elencano artisti e tracce musicali sono disposte a griglia e non hanno un numero limitato di elementi; questo può causare frustrazione nell'utente quando impegnato nella ricerca di un determinato artista: la disposizione della pagina lo obbliga ad effettuare lo scroll verticale e a sforzare la testa per individuare l'elemento ricercato.\\
@@ -31,19 +32,36 @@ Inoltre le tracce audio sono disposte in ordine cronologico (a differenza degli 
 Un elemento che può ridurre questo problema è lo strumento di ricerca del browser ma anche questo richiede sforzo per la sua attivazione e l'utente può non esserne a conoscenza.
 \subsection{Contenuti Multimediali}
 \label{multimedia}
-Mannaggia allo slideshow \\
-Caricamento immagine di menu può essere male per connessioni lente\\
-Integrazione soundcloud ottima ma no-javascript no avvisi\\
-Immagine di background non invasiva anzi integrata ottimamente\\
-Immagine header no copy e paste slogan\\
-Immagini release possono aiutare ad orientarsi (lasciano un ricordo di ciò che ho visto) \\
+Essendo un portale volto alla promozione di contenuti musicali, la scelta di proporre contenuto multimediale pare essere quella più ovvia, questa integrazione è stata fatta in modo molto buono dagli sviluppatori ma non è esente da pecche.\\
+\subsubsection{Lati Negativi}
+Lo slideshow, ad esempio, risulta essere un gran tallone d'achille per il sito: questo occupa gran parte della home page ma non offre alcuna informazione significativa, anzi può causare disorientamento nell'utente. Le immagini proposte sono infatti una panoramica delle ultime news ma, nonostante lo scorrimento abbia tempi buoni e viene offerto un sistema di controllo per l'utente (freccette direzionali), non sono accompagnate da nessun testo e cosa ancora più grave non sono cliccabili, infondendo solo confusione nell'utente. In più lo slideshow occupa 3/4 della parte visibile della home page occupando i timer dell'utente in modo fin troppo invasivo (come vedremo nel dettaglio dell'analisi della \hyperref[sec-home-page]{\texttt{Home Page}}).
+Altro problema più lieve è quello di usare un'immagine come segnalatore di pagina (i triangolini di cui parlavamo sopra): in presenza di connessioni ad internet molto lente questo può non mostrarsi nell'immediato disorientando l'utente, un problema comunque molto lieve.
+Ultimo problema (ancora più lieve) è lo slogan, essenzialmente sono due parole ma la sua rappresentazione tramite immagine preclude la possibilità di \texttt{copy\&paste} per gli utenti più pigri, che potrebbero frustrarsi.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=6cm]{immagini/slogan}
+	\caption{Slogan della compagnia}
+	\label{slogan-img}
+\end{figure}
+\newpage
+\subsubsection{Lati Positivi}
+Passando ai lati positivi (questo in particolare estremamente positivo) merita una menzione l'integrazione con il servizio di streaming audio \texttt{Soundcloud}: in ogni pagina di artista o release il sito offre la possibilità di ascoltare la musica tramite \texttt{Soundcloud} senza abbandonare il portale, suscitando gratificazione immediata all'utente che potrà usufruire del contenuto desiderato senza abbandonare la pagina che sta visitando. Inoltre la scelta di ascoltare la musica è affidata completamente all'utente: non parte in automatico. \\
+Se proprio dobbiamo trovarci una pecca è che browser senza javascript non solo non potranno usufruire del servizio di \texttt{Soundcloud} ma non verranno nemmeno avvisati della possibilità di farlo, osservando semplicemente uno spazio nero.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{immagini/soundcloud}
+	\caption{Integrazione con Soundcloud}
+	\label{soundcloud-integration}
+\end{figure}\\
+Altro lato positivo è l'immagine di sfondo, questa infatti si integra perfettamente con il design del sito e non appesantisce la fruizione dello stesso. \\
+Come vedremo più avanti il portale rompe la convenzione del visited link, rendendo più difficile l'individuazione dei contenuti già visitati, fortunatamente le immagini vengono in nostro aiuto: le release di tracce, sia nella home page che nella sezione dedicata, sono accompagnate dall'immagine di copertina, questo può aiutare nell'individuazione di eventuali novità: è più facile ricordarsi un immagine che un testo (titolo della release).
 \subsection{Rispetto Delle Convenzioni}
 \label{convenzioni}
 \subsubsection{Convenzioni Esterne}
 Nonostante il sito cerchi di avvicinarsi al mondo che la musica neurofunk rappresenta, non si presenta il fenomeno di bloated design:
 la navigazione infatti rimane scorrevole e le scelte stilistiche particolari si adattano bene alla struttura del sito, inoltre, essendo il portale atto a promuovere musica, non cade nell'errore dell'avvio automatico di tracce musicali: come, quando e perché ascoltare musica è completamente deciso dall'utente. \\
 Un problema invece lo troviamo nei link: il colore del testo normale e dei link non discosta di molto e link visitati non sono diversi da quelli non ancora cliccati. \\
-Dove invece si aumenta il contrasto tra collegamenti e testo normale (blocchi di testo molto grandi, eg: descrizioni artisti/release) l'utente cade in una nuova trappola: il colore dei link è uguale al colore delle parole chiave del testo, causando confusione e frustrazione al mancato evento successivo al click di un presunto link.\\
+Dove invece si aumenta il contrasto tra collegamenti e testo normale (blocchi di testo molto grandi, eg: descrizioni artisti/release) l'utente cade in una nuova trappola: il colore dei link è uguale al colore delle parole chiave del testo, causando confusione e frustrazione al mancato evento successivo al click di un presunto link (rottura della metafora visiva).\\
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=12cm]{immagini/non-link}
