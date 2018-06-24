@@ -30,6 +30,7 @@ Nel sito è completamente assente la funzionalità di ricerca, sebbene questo pu
 Inoltre le tracce audio sono disposte in ordine cronologico (a differenza degli artisti che seguono l'ordine alfabetico) senza esplicitare l'effettiva data d'uscita, richiedendo all'utente lo sforzo aggiuntivo di ricordare a grandi linee il periodo di pubblicazione della traccia desiderata. \\
 Un elemento che può ridurre questo problema è lo strumento di ricerca del browser ma anche questo richiede sforzo per la sua attivazione e l'utente può non esserne a conoscenza.
 \subsection{Contenuti Multimediali}
+\label{multimedia}
 Mannaggia allo slideshow \\
 Caricamento immagine di menu può essere male per connessioni lente\\
 Integrazione soundcloud ottima ma no-javascript no avvisi\\
@@ -39,11 +40,20 @@ Immagini release possono aiutare ad orientarsi (lasciano un ricordo di ciò che 
 \subsection{Rispetto Delle Convenzioni}
 \label{convenzioni}
 \subsubsection{Convenzioni Esterne}
-No bloated design\\
-No visited link\\
-Link non di facilissima individuazione
+Nonostante il sito cerchi di avvicinarsi al mondo che la musica neurofunk rappresenta, non si presenta il fenomeno di bloated design:
+la navigazione infatti rimane scorrevole e le scelte stilistiche particolari si adattano bene alla struttura del sito, inoltre, essendo il portale atto a promuovere musica, non cade nell'errore dell'avvio automatico di tracce musicali: come, quando e perché ascoltare musica è completamente deciso dall'utente. \\
+Un problema invece lo troviamo nei link: il colore del testo normale e dei link non discosta di molto e link visitati non sono diversi da quelli non ancora cliccati. \\
+Dove invece si aumenta il contrasto tra collegamenti e testo normale (blocchi di testo molto grandi, eg: descrizioni artisti/release) l'utente cade in una nuova trappola: il colore dei link è uguale al colore delle parole chiave del testo, causando confusione e frustrazione al mancato evento successivo al click di un presunto link.\\
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=12cm]{immagini/non-link}
+	\caption{Esempio di link  cliccabili e non cliccabili}
+	\label{non-link}
+\end{figure}\\
+Come vediamo nell'immagine sopra ad esempio, solo i primi tre link di colore verdi sono cliccabili, le restanti sono semplici parole chiave del testo. Inoltre le parole \texttt{Dinosaur Rock} sono cliccabili nel primo caso e non cliccabili nel secondo, causando ancora più confusione e frustrazione.
 \subsubsection{Convezioni Interne}
-A volta il link è sull'immagine (artisti, macrosezioni) a volte sul testo (releases/podcasts).
+Sebbene le convenzioni esterne siano discretamente rispettate, c'è una mancanza leggermente più grave nelle convenzioni interne del sito: in casi di contenuto informativo simile i link a volte sono posti sui titoletti mentre altre sulle immagini. Questa discrepanza può rompere la mappa mentale che l'utente si è fatto del sito, diminuendo la certezza che al click si scateni un evento. \\
+Un esempio possiamo trovarlo nelle pagine \texttt{Artists} e \texttt{Releases}: entrambe presentano una lista a griglia ma nella prima per accedere al contenuto in dettaglio è sufficiente cliccare sull'immagine, nella seconda invece bisogna cliccare sul testo immediatamente sotto (ignorando inoltre la legge di Fitt\footnote{https://it.wikipedia.org/wiki/Legge\_di\_Fitts}).
 \subsection{Gestione degli Errori}
 Capita a tutti gli utenti di cliccare su un link che indirizza ad una pagina non esistente, che sia un link sbagliato o un contenuto rimosso la situazione può essere frustrante per un utente meno esperto, soprattutto quando il link incriminato è all'interno del sito. \\
 Fortunatamente sul sito di Eatbrain non ci sono link "corrotti" ma è possibile che siti esterni indirizzino a pagine del sito che non esistono più. Per ovviare a questo problema gli sviluppatori di \texttt{eatbrain.net} hanno sviluppato una pagina di 404 (l'errore standard dell'http per il contenuto non trovato) personalizzata, che mantiene lo stesso layout del sito evitando di lasciare nell'utente la sensazione di smarrimento, offrendo il menu di navigazione per permettere all'utente di navigare nelle altre sezioni del sito.\\
