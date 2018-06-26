@@ -43,6 +43,7 @@
 \begin{document}
 
 \maketitle
+\thispagestyle{empty}
 \newpage
 \pagenumbering{roman}
 \tableofcontents
@@ -63,6 +64,7 @@ Questo documento si impegna ad analizzare l'usabilità desktop del sito web
 \section{Analisi Preliminare}
 \subfile{parts/preliminare}
 \section{Analisi Complessiva}
+\label{sec-complessiva}
 \subfile{parts/complessiva}
 \section{Analisi Dettagliata}
 In questa sezione effettueremo un analisi dettagliata delle pagine principali del portale, analizzando i 6 assi informativi e concludendo con una descrizione generale della pagina per individuare particolari pregi o difetti. \\
@@ -80,16 +82,19 @@ Nel caso dell'usabilità dei siti web possono essere così riassunte:
 \subsection{Home Page}
 \label{sec-home-page}
 \subfile{parts/dettagliata/home}
+\subsection{Deep Linking}
+Considerata la struttura dei documenti web descritta nella sezione \hyperref[sec-struttura]{\texttt{Struttura}}, la gestione del deep linking nelle pagine interne e la relativa comprensione degli assi obbligatori (\textbf{Where}, \textbf{Who} e \textbf{What}) è stata abbondantemente descritta nella sezione dedicata alla \hyperref[sec-home-page]{\texttt{Home Page}} e rimane sostanzialmente invariata. \\
+L'analisi delle altre pagine si concentrerà quindi sulle eventuali differenze che ci sono negli assi (tranne per il Why che rimane invariato), fornendo risposte per il contenuto interno. \\
+Eventuali considerazioni potranno essere effettuate sulla propagazione degli errori descritti nella sezione \hyperref[sec-complessiva]{\texttt{Analisi Complessiva}}.
 \subsection{Artists}
-Più meno tutto simile
-How grave senza ricerca
+\label{sec-artists}
+\subfile{parts/dettagliata/artists}
 \subsection{Releases/Podcast}
-When --> grave che non ci sia la data delle release
+\subfile{parts/dettagliata/releases}
 \subsection{Events}
+\subfile{parts/dettagliata/events}
 \subsection{Altre Pagine}
-Contacts poca roba da valutare \\
-Shop porta ad un altro dominio \\
-Pagine interne sono simili alle altre e non necessitano di analisi particolare.
+L'analisi dettagliate termina qui, le altre pagine infatti non portano alcun contenuto significativo a questo documento: Contacts presenta informazioni estremamente limitate, Shop porta ad un altro portale web dedicato all'E-Commerce dell'etichetta mentre le pagine più interne seguono la struttura di quelle analizzate in precedenza, raccogliendo pregi e difetti già descritti nell'\hyperref[sec-complessiva]{\texttt{Analisi Complessiva}}.
 \section{Valutazione e Considerazioni Finali}
 Voto Dominio 9.5 \\
 Voto SEO 6 \\
